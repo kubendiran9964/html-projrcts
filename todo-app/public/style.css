@@ -1,0 +1,164 @@
+:root {
+  --primary: #007bff;
+  --primary-dark: #0056b3;
+  --danger: #dc3545;
+  --danger-light: #ff4d4d;
+  --gray-light: #f9f9f9;
+  --gray-border: #ccc;
+  --gray-text: #555;
+  --completed-text: #999;
+  --background: #f2f4f8;
+  --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-border);
+  font-size: 1rem;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  flex: 1;
+  background: #eaeaea;
+  color: var(--gray-text);
+  margin: 0 4px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+.filters button.active {
+  background: var(--primary);
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: var(--gray-light);
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+li:hover {
+  background: #f1f1f1;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: var(--completed-text);
+}
+
+li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+li button {
+  background: transparent;
+  color: #999;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+li button:hover {
+  color: var(--danger);
+}
+
+.clear-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.clear-btn.red {
+  background: var(--danger-light);
+}
+
+.clear-btn.red:hover {
+  background: var(--danger);
+}
